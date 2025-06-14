@@ -10,20 +10,20 @@ messages = [
 ]
 
 class AnalizadorDeSentimientos:
-    def analizar_sentimiento(self, polaridad):
-        if polaridad > -0.6 and polaridad <= -0.3:
+    def analizar_sentimiento(self, pole):
+        if pole > -0.6 and pole <= -0.3:
             return "\x1b[1;31m"+'negativo'+"\x1b[0;37m"
-        elif polaridad > -0.3 and polaridad < 0:
+        elif pole > -0.3 and pole < 0:
             return "\x1b[1;31m"+'algo negativo'+"\x1b[0;37m"
-        elif polaridad == 0:
+        elif pole == 0:
             return "\x1b[1;33m"+'neutral'+"\x1b[0;37m"
-        elif polaridad > 0 and polaridad <= 0.3:
+        elif pole > 0 and pole <= 0.3:
             return "\x1b[1;33m"+'algo positivo'
-        elif polaridad > 0.3 and polaridad <= 0.6:
+        elif pole > 0.3 and pole <= 0.6:
             return "\x1b[1;32m"+'positivo'
-        elif polaridad > 0.6 and polaridad <= 0.9:
+        elif pole > 0.6 and pole <= 0.9:
             return "\x1b[1;32m"+'muy positivo'
-        elif polaridad > 0.9 and polaridad <= 1:
+        elif pole > 0.9 and pole <= 1:
             return "\x1b[1;32m"+'muy muy positivo'
         else :
             return "\x1b[1;31m"+'muy negativo'+"\x1b[0;37m"
